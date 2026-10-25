@@ -1,0 +1,160 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  color: #17243b;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.brand {
+  font-size: 32px;
+  font-weight: 800;
+  color: #124b7d;
+}
+
+.header p,
+.panel-heading p {
+  color: #64748b;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 30px rgba(20, 40, 70, 0.07);
+}
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.tag {
+  background: #e6f2ff;
+  color: #1766b1;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 28px;
+  padding: 14px 28px;
+  background: #1766b1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+.results {
+  margin-top: 32px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+}
+
+.price-card {
+  background: #eff6ff;
+  padding: 22px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-card strong {
+  font-size: 36px;
+  color: #1766b1;
+}
+
+.greeks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.greek-card {
+  padding: 16px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.greek-card span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.units {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.error {
+  color: #b91c1c;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 20px;
+  }
+
+  .form-grid,
+  .greeks-grid {
+    grid-template-columns: 1fr;
+  }
+}
