@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ddc2f09-e615-4e7a-af19-ee0857f5c198" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/pricing/sensitivities.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/AppLayout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Sidebar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/pricing/SensitivityCharts.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Bonds.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/CVA.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Exposure.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Options.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Swaps.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pricing/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pricing/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pricing/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pricing/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pricing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pricing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pricing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pricing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/pricing.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/pricing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +50,7 @@
     "Python tests.Python tests for pricing.tests.BlackScholesTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/professional-dashboard",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792937992377</updated>
-      <workItem from="1792937993465" duration="3571000" />
+      <workItem from="1792937993465" duration="12528000" />
     </task>
     <servers />
   </component>

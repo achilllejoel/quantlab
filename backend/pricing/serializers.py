@@ -23,3 +23,35 @@ class BlackScholesSerializer(serializers.Serializer):
                     key: "Must be a finite number."
                 })
         return attrs
+
+
+
+class BlackScholesSensitivitySerializer(BlackScholesSerializer):
+    variable = serializers.ChoiceField(
+        choices=["spot", "volatility", "maturity"],
+        default="spot",
+    )
+
+    minimum = serializers.FloatField()
+    maximum = serializers.FloatField()
+
+    points = serializers.IntegerField(
+        min_value=2,
+        max_value=201,
+        default=51,
+    )
+
+    def validate(self, attrs):
+        attrs = super().validate(attrs)
+
+        if attrs["minimum"] <= 0:
+            raise serializers.ValidationError({
+                "minimum": "Must be positive."
+            })
+
+        if attrs["maximum"] <= attrs["minimum"]:
+            raise serializers.ValidationError({
+                "maximum": "Must be greater than minimum."
+            })
+
+        return attrs
