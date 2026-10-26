@@ -3,6 +3,8 @@ from django.test import SimpleTestCase
 from rest_framework.test import APIClient
 
 from .black_scholes import BlackScholesParams, black_scholes
+from .sensitivities import black_scholes_sensitivities
+
 
 
 class BlackScholesTests(SimpleTestCase):
@@ -58,3 +60,50 @@ class BlackScholesTests(SimpleTestCase):
             10.45058357,
             places=6,
         )
+
+
+class BlackScholesSensitivityTests(SimpleTestCase):
+
+    def setUp(self):
+        self.params = BlackScholesParams(
+            spot=100,
+            strike=100,
+            maturity=1,
+            rate=0.05,
+            volatility=0.2,
+            dividend=0,
+        )
+
+    def test_series_length(self):
+        series = black_scholes_sensitivities(
+            self.params,
+            minimum=50,
+            maximum=150,
+            points=51,
+        )
+
+        self.assertEqual(len(series), 51)
+        self.assertAlmostEqual(series[0]["spot"], 50)
+        self.assertAlmostEqual(series[-1]["spot"], 150)
+
+    def test_at_the_money_price(self):
+        series = black_scholes_sensitivities(
+            self.params,
+            minimum=50,
+            maximum=150,
+            points=51,
+        )
+
+        self.assertAlmostEqual(
+            series[25]["price"],
+            10.450583572185565,
+            places=6,
+        )
+
+    def test_invalid_range(self):
+        with self.assertRaises(ValueError):
+            black_scholes_sensitivities(
+                self.params,
+                minimum=150,
+                maximum=50,
+            )
